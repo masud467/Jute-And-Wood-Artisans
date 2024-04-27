@@ -1,7 +1,7 @@
 const Footer = () => {
   return (
     <div>
-      <footer className="px-4 divide-y dark:bg-gray-100 dark:text-gray-800">
+      <footer className=" bg-base-200 px-4 divide-y dark:bg-gray-100 dark:text-gray-800">
         <div className="container flex flex-col justify-between py-10 mx-auto space-y-8 lg:flex-row lg:space-y-0">
           <div className="lg:w-1/3">
             <a
@@ -16,7 +16,15 @@ const Footer = () => {
               Jute And Wood Artisans
               </span>
             </a>
+            <div className="mt-5 space-y-2">
+            <h1 className="text-xl font-medium">Our Contact</h1>
+            <p>457 Morningview Lane, NY</p>
+            <p>+1 234 567 890</p>
+            <p>anymail@mail.com</p>
+            <p>Sun - Fri, 9am - 5pm</p>
           </div>
+          </div>
+          
           <div className="grid grid-cols-2 text-sm gap-x-3 gap-y-8 lg:w-2/3 sm:grid-cols-4">
             <div className="space-y-3">
               <h3 className="tracking-wide uppercase dark:text-gray-900">
@@ -51,11 +59,7 @@ const Footer = () => {
                    About us
                   </a>
                 </li>
-                <li>
-                  <a rel="noopener noreferrer" href="#">
-                   Contact
-                  </a>
-                </li>
+                
                 <li>
                   <a rel="noopener noreferrer" href="#">
                     Privacy
