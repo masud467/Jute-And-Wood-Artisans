@@ -1,6 +1,6 @@
-import { GithubAuthProvider, GoogleAuthProvider, createUserWithEmailAndPassword, getAuth,  signInWithEmailAndPassword, signInWithPopup } from "firebase/auth";
+import { GithubAuthProvider, GoogleAuthProvider, createUserWithEmailAndPassword, getAuth,  onAuthStateChanged,  signInWithEmailAndPassword, signInWithPopup, signOut } from "firebase/auth";
 import app from "../firebase/firebase.config";
-import { createContext, useState } from "react";
+import { createContext, useEffect, useState } from "react";
 
 const auth = getAuth(app);
 export const AuthContext = createContext(null)
@@ -10,6 +10,7 @@ const githubProvider = new GithubAuthProvider
 const AuthProvider = ({children}) => {
 
     const [loading,setLoading] = useState(true)
+    const [user,setUser] = useState(null)
 
     const createUser = (email,password)=>{
         setLoading(true)
@@ -31,7 +32,23 @@ const AuthProvider = ({children}) => {
         return signInWithPopup(auth,githubProvider)
     }
 
-const userInfo = {createUser,loading,signInUser,logInWithGoogle,logInWithGithub}
+    const logOut = () =>{
+        setLoading(true)
+       return signOut(auth)
+    }
+
+    useEffect(()=>{
+        const unSubscribe = onAuthStateChanged(auth,currentUser=>{
+            setUser(currentUser)
+            setLoading(false)
+        })
+        return() =>{
+            unSubscribe
+        }
+    },[])
+
+// eslint-disable-next-line no-dupe-keys
+const userInfo = {createUser,loading,signInUser,logInWithGoogle,logInWithGithub,user,loading,logOut}
     return (
         <AuthContext.Provider value={userInfo}>
             {children}
