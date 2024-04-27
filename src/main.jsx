@@ -12,6 +12,9 @@ import Home from './Pages/Home';
 import LogIn from './Pages/LogIn';
 import AuthProvider from './Providers/AuthProvider';
 import Register from './Pages/Register';
+import AllItems from './Pages/AllItems';
+import AddItems from './Pages/AddItems';
+import MyCart from './Pages/MyCart';
 
 const router = createBrowserRouter([
   {
@@ -19,8 +22,20 @@ const router = createBrowserRouter([
     element: <Root></Root>,
     children:[
      {
-      path:'/home',
+      path:'/',
       element:<Home></Home>
+     },
+     {
+      path:'/allitem',
+      element:<AllItems></AllItems>
+     },
+     {
+      path:'/additem',
+      element:<AddItems></AddItems>
+     },
+     {
+      path:'/mycart',
+      element:<MyCart></MyCart>
      },
      {
       path:'/login',

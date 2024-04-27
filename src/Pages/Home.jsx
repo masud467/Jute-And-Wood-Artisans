@@ -3,7 +3,18 @@
 const Home = () => {
     return (
         <div>
-            <h1>home page is coming soon</h1>
+          <div>
+          <h1>Slider/carousal is coming...</h1>
+          </div>
+          <div>
+            <h1> Craft items section </h1>
+          </div>
+          <div>
+          Art & Craft Categories Section for challenging part
+          </div>
+          <div>
+            <h1>2 Extra Sections</h1>
+          </div>
         </div>
     );
 };

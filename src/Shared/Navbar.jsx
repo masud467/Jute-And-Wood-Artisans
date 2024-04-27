@@ -26,17 +26,17 @@ const Navbar = () => {
               tabIndex={0}
               className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
             >
-              <NavLink to="/home">
+              <NavLink to="/">
                 <li>
                   <a>Home</a>
                 </li>
               </NavLink>
-              <NavLink to="/allitems">
+              <NavLink to="/allitem">
                 <li>
                   <a>All Items </a>
                 </li>
               </NavLink>
-              <NavLink to="/additems">
+              <NavLink to="/additem">
                 <li>
                   <a>Add Items</a>
                 </li>
@@ -59,17 +59,17 @@ const Navbar = () => {
         </div>
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1">
-            <NavLink to="/home">
+            <NavLink to="/">
               <li>
                 <a>Home</a>
               </li>
             </NavLink>
-            <NavLink to="/allitems">
+            <NavLink to="/allitem">
               <li>
                 <a>All Items </a>
               </li>
             </NavLink>
-            <NavLink to="/additems">
+            <NavLink to="/additem">
               <li>
                 <a>Add Items</a>
               </li>
