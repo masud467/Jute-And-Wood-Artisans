@@ -30,13 +30,14 @@ const router = createBrowserRouter([
      },
      {
       path:'/item/:id',
-      element:<ViewDetails></ViewDetails>,
+      element:<PrivateRoute><ViewDetails></ViewDetails></PrivateRoute>,
       // loader:(params) => fetch(`http://localhost:6001/item/${params._id}`)
       
      },
      {
       path:'/allitem',
-      element:<AllItems></AllItems>
+      element:<AllItems></AllItems>,
+      loader:()=> fetch("http://localhost:6001/item")
      },
      {
       path:'/additem',
