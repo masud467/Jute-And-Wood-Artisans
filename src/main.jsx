@@ -16,6 +16,7 @@ import AllItems from './Pages/AllItems';
 import AddItems from './Pages/AddItems';
 import MyCart from './Pages/MyCart';
 import PrivateRoute from './Routes/PrivateRoute';
+import ViewDetails from './Pages/ViewDetails';
 
 const router = createBrowserRouter([
   {
@@ -26,6 +27,12 @@ const router = createBrowserRouter([
       path:'/',
       element:<Home></Home>,
       loader: () => fetch("http://localhost:6001/item"),
+     },
+     {
+      path:'/item/:id',
+      element:<ViewDetails></ViewDetails>,
+      // loader:(params) => fetch(`http://localhost:6001/item/${params._id}`)
+      
      },
      {
       path:'/allitem',

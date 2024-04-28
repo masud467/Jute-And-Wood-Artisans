@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 
 const ItemCard = ({item}) => {
-    const {image,item_name,subcategory_name,description,price,rating,customization,processing_time,stockStatus} = item
+    const {_id,image,item_name,subcategory_name,description,price,rating,customization,processing_time,stockStatus} = item
     return (
         <div>
             <div className="card card-side bg-base-100 shadow-xl p-4 ">
@@ -16,7 +16,7 @@ const ItemCard = ({item}) => {
             <p className=" font-medium">Price: {price}</p>
             <p className=" font-medium">Rating: {rating}</p>
             <p className=" font-medium">{stockStatus}</p>
-            <button className="btn  btn-primary rounded-md">Show Details</button>
+            <Link to={`/item/${_id}`}><button className="btn  btn-primary rounded-md">Show Details</button></Link>
           </div>
           
         </div>
