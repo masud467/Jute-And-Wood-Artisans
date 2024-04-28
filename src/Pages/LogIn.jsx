@@ -1,11 +1,13 @@
 import { useContext } from "react";
 import { AuthContext } from "../Providers/AuthProvider";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
 
 const LogIn = () => {
   const { signInUser, logInWithGoogle,logInWithGithub } = useContext(AuthContext);
-
+  const location = useLocation()
+  const navigate = useNavigate()
+const from = location?.state || '/'
   const handleLogIn = (e) => {
     e.preventDefault();
     const form = e.target;
@@ -16,6 +18,7 @@ const LogIn = () => {
     signInUser(email, password)
       .then((result) => {
         console.log(result.user);
+        navigate(from)
         Swal.fire({
           icon: "success",
           title: "Good job!",
@@ -36,6 +39,7 @@ const LogIn = () => {
     logInWithGoogle()
       .then((result) => {
         console.log(result.user);
+        navigate(from)
       })
       .catch((error) => {
         console.error(error);
@@ -47,6 +51,7 @@ const LogIn = () => {
     logInWithGithub()
     .then((result) => {
       console.log(result.user);
+      navigate(from)
     })
     .catch((error) => {
       console.error(error);

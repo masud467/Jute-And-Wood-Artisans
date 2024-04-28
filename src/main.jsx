@@ -15,6 +15,7 @@ import Register from './Pages/Register';
 import AllItems from './Pages/AllItems';
 import AddItems from './Pages/AddItems';
 import MyCart from './Pages/MyCart';
+import PrivateRoute from './Routes/PrivateRoute';
 
 const router = createBrowserRouter([
   {
@@ -31,7 +32,7 @@ const router = createBrowserRouter([
      },
      {
       path:'/additem',
-      element:<AddItems></AddItems>
+      element:<PrivateRoute><AddItems></AddItems></PrivateRoute>
      },
      {
       path:'/mycart',
