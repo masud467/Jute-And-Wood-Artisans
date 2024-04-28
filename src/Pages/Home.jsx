@@ -1,4 +1,8 @@
+import { useLoaderData } from "react-router-dom";
+import ItemCard from "../Components/ItemCard";
+
 const Home = () => {
+    const items = useLoaderData();
   return (
     <div>
       <div>
@@ -62,7 +66,12 @@ const Home = () => {
         </div>
       </div>
       <div>
-        <h1> Craft items section </h1>
+        <h1 className="text-center text-3xl font-bold">Our Popular Items:{items.length} </h1>
+        <div className="grid md:grid-cols-2 gap-5">
+            {
+                items.map(item=><ItemCard key={item._id} item={item}></ItemCard>)
+            }
+        </div>
       </div>
       <div>Art & Craft Categories Section for challenging part</div>
       <div>
