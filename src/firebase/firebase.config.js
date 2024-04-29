@@ -5,12 +5,12 @@ import { initializeApp } from "firebase/app";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyBcyPmmGoWjVmpGvaYNL-0gCUIbkvqgmHQ",
-  authDomain: "jute-and-wood-artisans.firebaseapp.com",
-  projectId: "jute-and-wood-artisans",
-  storageBucket: "jute-and-wood-artisans.appspot.com",
-  messagingSenderId: "707463924337",
-  appId: "1:707463924337:web:615da70c50142a47fa69d0"
+  apiKey:import.meta.env.VITE_APIKEY ,
+  authDomain:import.meta.env.VITE_AUTHDOMAIN ,
+  projectId:import.meta.env.VITE_PROJECTID ,
+  storageBucket:import.meta.env.VITE_STORAGEBUCKET ,
+  messagingSenderId:import.meta.env.VITE_MESSAGINGSENDERID ,
+  appId:import.meta.env.VITE_APPID ,
 };
 
 // Initialize Firebase

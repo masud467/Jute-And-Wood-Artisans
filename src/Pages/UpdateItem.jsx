@@ -26,6 +26,7 @@ const UpdateItem = () => {
             const customization = from.customization.value;
             const processing_time = from.processing_time.value;
             const stockStatus = from.stockStatus.value;
+            
 
             
         const newItem = {image,item_name,subcategory_name,description,price,rating,customization,processing_time,stockStatus}

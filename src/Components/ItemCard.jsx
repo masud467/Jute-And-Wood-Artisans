@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import PropTypes from 'prop-types';
 
 
 const ItemCard = ({item}) => {
@@ -26,3 +27,7 @@ const ItemCard = ({item}) => {
 };
 
 export default ItemCard;
+
+ItemCard.propTypes ={
+item:PropTypes.object
+}
