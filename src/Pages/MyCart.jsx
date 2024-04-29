@@ -8,6 +8,21 @@ import Swal from "sweetalert2";
 const MyCart = () => {
     const {user} = useContext(AuthContext)
   const [items,setItems] = useState([])
+  const [displayItem,setDisplayItem] = useState([])
+
+  const handleItemFilter = filter=>{
+    if(filter==='all'){
+        setDisplayItem(items)
+    }
+    else if(filter==='yes'){
+        const customization = items.filter(item=> item.customization==="yes")
+        setDisplayItem(customization)
+    }
+    else if(filter==='no'){
+        const noCustomization = items.filter(item=> item.customization==='no')
+       setDisplayItem(noCustomization)
+    }
+  }
   
    useEffect(()=>{
     fetch(`http://localhost:6001/myProduct/${user?.email}`)
@@ -15,6 +30,7 @@ const MyCart = () => {
    .then(data =>{
     console.log(data)
    setItems(data)
+   setDisplayItem(data)
    })
    },[user])
 
@@ -53,10 +69,32 @@ const handleDelete =(id) =>{
           });
     }
     return (
-        <div className="grid md:grid-cols-2 gap-6">
+        <div>
+             <div className="text-center mt-10">
+        <details className="dropdown">
+          <summary className="m-1 btn bg-[#23BE0A] text-white">
+            Sort by{" "}
+            <span>
+              <img src="/image/sort.png" alt="" />
+            </span>
+          </summary>
+          <ul className="p-2 shadow menu dropdown-content z-[1] bg-base-100 rounded-box w-52">
+            <li onClick={() => handleItemFilter("all")}>
+              <a>All</a>
+            </li >
+            <li onClick={() => handleItemFilter("yes")}>
+              <a>Customization</a>
+            </li>
+            <li onClick={() => handleItemFilter("no")}>
+              <a>No Customization</a>
+            </li>
+          </ul>
+        </details>
+      </div>
+            <div className="grid md:grid-cols-2 gap-6">
             
             {
-                items.map(item=> <div key={item._id}>
+                displayItem.map(item=> <div key={item._id}>
                    <div className="card card-side bg-base-100 shadow-xl p-4 ">
         <figure>
           <img className="w-96 h-56" src={item.image} alt="" />
@@ -79,6 +117,7 @@ const handleDelete =(id) =>{
       </div>
                 </div>)
             }
+        </div>
         </div>
     );
 };
