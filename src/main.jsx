@@ -18,11 +18,13 @@ import MyCart from './Pages/MyCart';
 import PrivateRoute from './Routes/PrivateRoute';
 import ViewDetails from './Pages/ViewDetails';
 import UpdateItem from './Pages/UpdateItem';
+import ErrorPage from './Pages/ErrorPage';
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Root></Root>,
+    errorElement:<ErrorPage></ErrorPage>,
     children:[
      {
       path:'/',
