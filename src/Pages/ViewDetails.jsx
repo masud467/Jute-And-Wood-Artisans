@@ -37,7 +37,7 @@ const ViewDetails = () => {
     <div>
       <div className="card card-compact w-full bg-base-100 shadow-xl">
         <figure>
-          <img src={image} alt="Shoes" />
+          <img src={image} alt="" />
         </figure>
         <div className="card-body ">
           <h2 className="font-bold text-2xl">{subcategory_name}</h2>
