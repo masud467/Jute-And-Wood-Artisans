@@ -40,7 +40,7 @@ const handleDelete =(id) =>{
                     if(data.deletedCount){
                         Swal.fire({
                             title: "Deleted!",
-                            text: "Your file has been deleted.",
+                            text: "Your item has been deleted.",
                             icon: "success"
                           });
                           const remaining = items.filter(item=>item._id!==id)
@@ -70,8 +70,8 @@ const handleDelete =(id) =>{
             <p className=" font-medium">Stock Status: {item.stockStatus}</p>
             <p className=" font-medium">Customization: {item.customization}</p>
            <div className="flex justify-around mt-5">
-           <Link to=''><button className=" btn btn-primary rounded-md">Update</button></Link>
-            <Link to=''><button onClick={()=>handleDelete(item._id)} className=" btn btn-primary rounded-md">Delete</button></Link>
+           <Link to={`/update/${item._id}`}><button className=" btn btn-primary rounded-md">Update</button></Link>
+            <button onClick={()=>handleDelete(item._id)} className=" btn btn-primary rounded-md">Delete</button>
            </div>
           </div>
           

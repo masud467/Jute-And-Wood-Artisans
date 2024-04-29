@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 
 const ItemCard = ({item}) => {
-    const {_id,image,item_name,subcategory_name,description,price,rating,customization,processing_time,stockStatus} = item
+    const {_id,image,item_name,subcategory_name,price,rating,stockStatus} = item
     return (
         <div>
             <div className="card card-side bg-base-100 shadow-xl p-4 ">

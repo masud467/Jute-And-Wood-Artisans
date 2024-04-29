@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React  from 'react'
 import ReactDOM from 'react-dom/client'
 
 import './index.css'
@@ -17,6 +17,7 @@ import AddItems from './Pages/AddItems';
 import MyCart from './Pages/MyCart';
 import PrivateRoute from './Routes/PrivateRoute';
 import ViewDetails from './Pages/ViewDetails';
+import UpdateItem from './Pages/UpdateItem';
 
 const router = createBrowserRouter([
   {
@@ -31,7 +32,7 @@ const router = createBrowserRouter([
      {
       path:'/item/:id',
       element:<PrivateRoute><ViewDetails></ViewDetails></PrivateRoute>,
-      // loader:(params) => fetch(`http://localhost:6001/item/${params._id}`)
+      
       
      },
      {
@@ -45,7 +46,12 @@ const router = createBrowserRouter([
      },
      {
       path:'/mycart',
-      element:<MyCart></MyCart>
+      element:<PrivateRoute><MyCart></MyCart></PrivateRoute>
+     },
+     {
+      path:'/update/:id',
+      element:<PrivateRoute><UpdateItem></UpdateItem></PrivateRoute>,
+      loader:({params})=> fetch(`http://localhost:6001/item/${params.id}`)
      },
      {
       path:'/login',
