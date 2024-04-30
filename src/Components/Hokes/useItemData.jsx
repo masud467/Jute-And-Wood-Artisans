@@ -8,7 +8,7 @@ const useItemData = () => {
     useEffect(()=>{
         const fetchData = async () => {
             // setLoading(true)
-            const res = await fetch ('http://localhost:6001/item');
+            const res = await fetch ('https://jute-and-wood-artisans-for-server.vercel.app/item');
             const data = await res.json();
             setData(data)
             // setLoading(false)

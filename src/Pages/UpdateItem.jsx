@@ -31,7 +31,7 @@ const UpdateItem = () => {
             
         const newItem = {image,item_name,subcategory_name,description,price,rating,customization,processing_time,stockStatus}
         console.log(newItem)
-        fetch(`http://localhost:6001/item/${_id}`,{
+        fetch(`https://jute-and-wood-artisans-for-server.vercel.app/item/${_id}`,{
             method:"PUT",
             headers:{
                 "content-type": "application/json",

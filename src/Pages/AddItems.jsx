@@ -28,7 +28,7 @@ const AddItems = () => {
         const newItem = {image,item_name,subcategory_name,description,price,rating,customization,processing_time,stockStatus,email,name}
         console.log(newItem)
 
-        fetch('http://localhost:6001/item',{
+        fetch('https://jute-and-wood-artisans-for-server.vercel.app/item',{
             method:"POST",
             headers:{
                 "content-type":"application/json"

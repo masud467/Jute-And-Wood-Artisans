@@ -25,7 +25,7 @@ const MyCart = () => {
   }
   
    useEffect(()=>{
-    fetch(`http://localhost:6001/myProduct/${user?.email}`)
+    fetch(`https://jute-and-wood-artisans-for-server.vercel.app/myProduct/${user?.email}`)
    .then(res=>res.json())
    .then(data =>{
     console.log(data)
@@ -47,7 +47,7 @@ const handleDelete =(id) =>{
             confirmButtonText: "Yes, delete it!"
           }).then((result) => {
             if (result.isConfirmed) {
-                fetch(`http://localhost:6001/item/${id}`,{
+                fetch(`https://jute-and-wood-artisans-for-server.vercel.app/item/${id}`,{
                     method:"DELETE"
                 })
                 .then(res =>res.json())
@@ -97,7 +97,7 @@ const handleDelete =(id) =>{
                 displayItem.map(item=> <div key={item._id}>
                    <div className="card card-side bg-base-100 shadow-xl p-4 ">
         <figure>
-          <img className="w-96 h-56" src={item.image} alt="" />
+          <img className="md:w-96 h-56" src={item.image} alt="" />
         </figure>
         <div className="flex justify-between  w-full mx-4">
           <div className="">

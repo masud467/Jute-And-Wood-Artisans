@@ -57,7 +57,7 @@ const Register = () => {
             
           });
         const user = { email };
-        fetch("http://localhost:6001/user", {
+        fetch("https://jute-and-wood-artisans-for-server.vercel.app/user", {
           method: "POST",
           headers: {
             "content-type": "application/json",

@@ -11,10 +11,10 @@ const AllItems = () => {
           <thead>
             <tr >
               <th></th>
-              <th className="text-xl font-semibold">Name</th>
-              <th className="text-xl font-semibold">SubCategory Name</th>
-              <th className="text-xl font-semibold">Price</th>
-              <th></th>
+              <th className="md:text-xl font-semibold">Name</th>
+              <th className="md:text-xl font-semibold">SubCategory Name</th>
+              <th className="md:text-xl font-semibold">Price</th>
+              <th className="md:text-xl font-semibold">Action</th>
             </tr>
           </thead>
           <tbody>

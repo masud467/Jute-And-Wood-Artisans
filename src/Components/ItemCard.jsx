@@ -8,7 +8,7 @@ const ItemCard = ({item}) => {
         <div>
             <div className="card card-side bg-base-100 shadow-xl p-4 ">
         <figure>
-          <img className="w-96 h-56" src={image} alt="" />
+          <img className="md:w-96 h-56" src={image} alt="" />
         </figure>
         <div className="flex justify-between  w-full mx-4">
           <div className="">

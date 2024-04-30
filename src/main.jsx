@@ -29,7 +29,7 @@ const router = createBrowserRouter([
      {
       path:'/',
       element:<Home></Home>,
-      loader:  () =>  fetch("http://localhost:6001/item"),
+      loader:  () =>  fetch("https://jute-and-wood-artisans-for-server.vercel.app/item"),
      },
      {
       path:'/item/:id',
@@ -40,7 +40,7 @@ const router = createBrowserRouter([
      {
       path:'/allitem',
       element:<AllItems></AllItems>,
-      loader:()=> fetch("http://localhost:6001/item")
+      loader:()=> fetch("https://jute-and-wood-artisans-for-server.vercel.app/item")
      },
      {
       path:'/additem',
@@ -53,7 +53,7 @@ const router = createBrowserRouter([
      {
       path:'/update/:id',
       element:<PrivateRoute><UpdateItem></UpdateItem></PrivateRoute>,
-      loader:({params})=> fetch(`http://localhost:6001/item/${params.id}`)
+      loader:({params})=> fetch(`https://jute-and-wood-artisans-for-server.vercel.app/item/${params.id}`)
      },
      {
       path:'/login',
