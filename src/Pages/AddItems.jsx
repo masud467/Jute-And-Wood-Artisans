@@ -22,6 +22,18 @@ const AddItems = () => {
         const email = user.email;
         const name= user.displayName;
         from.reset()
+
+
+
+      
+
+       
+
+
+
+        
+
+
         
        
 
@@ -89,12 +101,22 @@ const AddItems = () => {
               <span className="label-text">Subcategory Name</span>
             </label>
             <label className="input-group">
-              <input
+             <select className="select select-bordered w-full ">
+             <input
                 type="text"
                 name="subcategory_name"
                 placeholder="subcategory name"
-                className="input input-bordered w-full "
+                className="input input-bordered w-full   "
               />
+     <option disabled selected></option>
+  <option>Wooden Furniture & Sculptures</option>
+  <option>Wooden Home Decor</option>
+  <option>Wooden Utensils and Kitchenware</option>
+  <option>Jute Home Decor</option>
+  <option>Jute Kitchenware & utensils</option>
+  <option>Jute and wooden jewellery</option>
+
+             </select>
             </label>
             <div className="label"></div>
           </div>

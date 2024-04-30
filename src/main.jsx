@@ -30,6 +30,7 @@ const router = createBrowserRouter([
       path:'/',
       element:<Home></Home>,
       loader:  () =>  fetch("https://jute-and-wood-artisans-for-server.vercel.app/item"),
+      
      },
      {
       path:'/item/:id',

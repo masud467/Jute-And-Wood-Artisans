@@ -1,10 +1,34 @@
 import { useLoaderData } from "react-router-dom";
 import ItemCard from "../Components/ItemCard";
 
+import {  useState } from "react";
+import CategoryCard from "../Components/CategoryCard";
+
 
 const Home = () => {
   const items = useLoaderData();
 
+
+   const [categories,setCategories] = useState()
+   const [displayCategory,setDisplayCategory] = useState()
+
+
+  fetch("https://jute-and-wood-artisans-for-server.vercel.app/category")
+  .then(res=>res.json())
+  .then( data=>{
+    console.log(data)
+    setCategories(data)
+    setDisplayCategory(data)
+  })
+
+
+
+
+  
+
+
+
+  
   
   
   return (
@@ -84,7 +108,20 @@ const Home = () => {
           ))}
         </div>
       </div>
-      <div>Art & Craft Categories Section for challenging part</div>
+      {/* Art & Craft Categories Section */}
+      <div className="mt-16"> 
+        <h1 className="text-4xl font-bold text-center">Art & Craft Categories Section </h1>
+      
+        <div>
+        <div className="grid md:grid-cols-2 gap-5 mt-10 ">
+         
+          {categories &&
+            displayCategory.map(category=> <CategoryCard key={category._id} category={category}></CategoryCard>)
+          }
+        </div>
+        </div>
+       
+      </div>
       <div>
         <section className="dark:bg-gray-100 dark:text-gray-800">
           <div className="container flex flex-col justify-center p-4 mx-auto md:p-8">
