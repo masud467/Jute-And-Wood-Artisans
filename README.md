@@ -22,13 +22,14 @@ For Customers: Offers a curated selection of sustainable and aesthetically pleas
 4.Versatile options: From stylish wooden furniture to charming jute wall hangings and more, find a diverse selection of products to suit every taste and style.
 
 5. sourcing: We prioritize ethical sourcing practices, working directly with artisans to create fair-trade products that empower local communities.
+
 ## Steps to Clone and Run Locally:
-Clone the Repository: Use Git to clone the project.
-Navigate to Directory: Go to the project folder.
-Install Dependencies: Run the package manager to install dependencies.
-Set Up Environment Variables: Create and configure the environment file.
-Run Backend Server: Start the server.
-Run Frontend: Launch the frontend development server.
-Access Application: Open in a web browser.
+-Clone the Repository: Use Git to clone the project.
+-Navigate to Directory: Go to the project folder.
+-Install Dependencies: Run the package manager to install dependencies.
+-Set Up Environment Variables: Create and configure the environment file.
+-Run Backend Server: Start the server.
+-Run Frontend: Launch the frontend development server.
+-Access Application: Open in a web browser.
 
 
