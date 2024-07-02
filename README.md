@@ -14,22 +14,18 @@ For Customers: Offers a curated selection of sustainable and aesthetically pleas
 ## The five bullet points to feature my websit is :
 
 1.Artisan Profiles: Detailed profiles for each artisan, showcasing their skills and unique products.
-
 2.Product Listings: Extensive catalog of jute and wood products with high-quality images and descriptions.
-
 3.Handmade with care: Each item is meticulously crafted by skilled artisans, ensuring superior quality and attention to detail in every product.
-
 4.Versatile options: From stylish wooden furniture to charming jute wall hangings and more, find a diverse selection of products to suit every taste and style.
-
 5. sourcing: We prioritize ethical sourcing practices, working directly with artisans to create fair-trade products that empower local communities.
 
 ## Steps to Clone and Run Locally:
--Clone the Repository: Use Git to clone the project.
--Navigate to Directory: Go to the project folder.
--Install Dependencies: Run the package manager to install dependencies.
--Set Up Environment Variables: Create and configure the environment file.
--Run Backend Server: Start the server.
--Run Frontend: Launch the frontend development server.
--Access Application: Open in a web browser.
+1.Clone the Repository: Use Git to clone the project.
+2.Navigate to Directory: Go to the project folder.
+3.Install Dependencies: Run the package manager to install dependencies.
+4.Set Up Environment Variables: Create and configure the environment file.
+5.Run Backend Server: Start the server.
+6.Run Frontend: Launch the frontend development server.
+7.Access Application: Open in a web browser.
 
 
