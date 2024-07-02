@@ -21,7 +21,7 @@ For Customers: Offers a curated selection of sustainable and aesthetically pleas
 
 4.Versatile options: From stylish wooden furniture to charming jute wall hangings and more, find a diverse selection of products to suit every taste and style.
 
-5. sourcing: We prioritize ethical sourcing practices, working directly with artisans to create fair-trade products that empower local communities.
+5.sourcing: We prioritize ethical sourcing practices, working directly with artisans to create fair-trade products that empower local communities.
 
 ## Steps to Clone and Run Locally:
 1.Clone the Repository: Use Git to clone the project.
